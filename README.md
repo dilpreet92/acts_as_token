@@ -1,7 +1,6 @@
 # ActsAsToken
 
-TODO: Write a gem description
-
+This will create a random token number of a specific length
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,7 +19,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+class Articles < ActiveRecord::Base
+  acts_as_token
+  #it will generate a random number of 10 digit length and expecting column_name to be token_id
+end
+
+For creating specific column_name and length use as:
+acts_as_token column_name: :article_token, length: 12
 
 ## Contributing
 
