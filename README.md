@@ -19,13 +19,17 @@ Or install it yourself as:
 
 ## Usage
 
+```ruby
 class Articles < ActiveRecord::Base
   acts_as_token
   #it will generate a random number of 10 digit length and expecting column_name to be token_id
 end
+```
 
 For creating specific column_name and length use as:
+```ruby
 acts_as_token column_name: :article_token, length: 12
+```
 
 ## Contributing
 
